@@ -8,7 +8,6 @@ namespace ClassLibrary1
     {
         public int Calculate(string input)
         {
-            //var separators = new[] { ',', '\n' };
             var separators = new List<char> { ',', '\n' };
 
             if (string.IsNullOrWhiteSpace(input)) return 0;
@@ -17,7 +16,6 @@ namespace ClassLibrary1
             if (ContainsCustomSeparator(input))
             {
                 separators.Add(input[2]);
-                //separators = AddSeparators(separators, input[2]);
                 input = input.Substring(4);
             }
 
